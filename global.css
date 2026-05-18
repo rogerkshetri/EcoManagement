@@ -16,21 +16,42 @@
     --clr-bg-page:    #F8FAFC;  
     --clr-bg-surface: #FFFFFF;   
     --clr-bg-info:    #EFF6FF;  
+    --clr-bg-success: #ECFDF5;
 
     /*text*/
     --clr-text-primary:   #1E293B;  
     --clr-text-secondary: #64748B;  
-    --clr-text-info:      #1E40AF;  
+    --clr-text-info:      #1E40AF;
+    --clr-text-white:     #FFFFFF;  
 
     /*misc*/ 
-    --clr-accent:      #4E8FF9;  
-    --clr-btn-hover:   #3B82F6;  
-    --clr-btn-default: #CBD5E1;  
+    --clr-accent:       #4E8FF9; 
+    --clr-accent-hover: #2563EB;
+    --clr-btn-hover:    #3B82F6;  
+    --clr-btn-default:  #CBD5E1;  
+
+    /*success*/
+    --clr-success:        #10B981;
+    --clr-success-dark:   #059669;
+
+    /*purple*/
+    --clr-purple:        #6D28D9;
+    --clr-purple-bg:     #F0E7FF;
+    --clr-purple-soft:   #EDE9FE;
+    --clr-purple-hover:  #DCC9F8;
 
     /*borders*/
-    --clr-border:        #DDDDDD;  
-    --clr-border-upload: #CBD5E1;  
-    --clr-border-info:   #BFDBFE;  
+    --clr-border:         #DDDDDD;  
+    --clr-border-upload:  #CBD5E1;  
+    --clr-border-info:    #BFDBFE;
+    --clr-border-light:   #E2E8F0;
+    --clr-border-blue:    #DBEAFE;
+    --clr-border-success: #86EFAC;
+
+    /*shadows*/
+    --shadow-sm: 0 2px 2px rgba(0, 0, 0, 0.15); 
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.20);
+    --shadow-lg: 2px 4px 8px rgba(0, 0, 0, 0.25);
 }
 
 body {
@@ -56,7 +77,7 @@ header {
     align-items: center;
     padding: 0px 30px;
     background: #FFF;
-    border-bottom: 1px solid #DDD;
+    border-bottom: 1px solid var(--clr-border);
 }
 
 .logo img {
@@ -118,7 +139,7 @@ footer {
     gap: 20px;
     padding: 15px 40px;
     background: #FFF;
-    border-top: 1px solid #DDD;
+    border-top: 1px solid var(--clr-border);
     font-size: 12px;
     font-weight: 600;
     color: var(--clr-text-primary);
@@ -168,7 +189,7 @@ footer a:hover {
   width: 560px;
   background: #fff;
   border-radius: 8px;
-  box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: var(--shadow-lg);
   overflow: hidden;
   text-align: center;
 }
@@ -209,7 +230,7 @@ footer a:hover {
   font-weight: bold;
 
   /* Button shadow */
-  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.50));
+  box-shadow: var(--shadow-sm);
 
   /* Smooth hover transition */
   transition: all 0.2s ease;
@@ -228,7 +249,7 @@ footer a:hover {
   transform: translateY(-2px);
 
   /* Stronger shadow on hover */
-  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+  box-shadow: var(--shadow-md);
 }
 
 /* 
@@ -319,14 +340,14 @@ footer a:hover {
   cursor: pointer;           
   align-self: center;
   transition: all 0.2s ease;
-  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+  box-shadow: var(--shadow-sm);
 }
 
 .continue-btn:hover {
   background: var(--clr-btn-hover);
   color: var(--clr-bg-surface);
   transform: translateY(-2px);
-  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+  box-shadow: var(--shadow-md);
   opacity: 0.9;
 }
 
@@ -397,14 +418,14 @@ footer a:hover {
     width: 745px;
     border-radius: 16px;
     background: #FFF;
-    box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: var(--shadow-lg);
     overflow: hidden;
     padding: 0px;
 }
 
 .bill-header {
     background: var(--clr-accent);
-    color: #fff;
+    color: var(--clr-text-white);
     text-align: center;
     padding: 20px 16px;
 
@@ -513,32 +534,32 @@ footer a:hover {
     font-weight: 700;
     text-align: center;
     display: inline-block;
-    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.50));
+    box-shadow: var(--shadow-sm);
     transition: all 0.2s ease;
 }
 .bill-action-btn:hover {
     transform: translateY(-2px);
-    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+    box-shadow: var(--shadow-md);
 }
 
 .bill-primary-btn {
     background: var(--clr-btn-hover);
-    color: #fff;
+    color: var(--clr-text-white);
 }
 .bill-primary-btn:hover {
-    background: #2563EB;
+    background: var(--clr-accent-hover);
 }
 
 .bill-secondary-btn {
-    background: #F0E7FF;
-    color: #6D28D9;
+    background: var(--clr-purple-bg);
+    color: var(--clr-purple);
 }
 .bill-secondary-btn:hover {
-    background: #dcc9f8;
+    background: var(--clr-purple-hover);
 }
 
 .bill-upload-link {
-    color: #2563EB;
+    color: var(--clr-accent-hover);
     font-size: 16px;
     font-weight: 700;
     text-decoration: none;
@@ -587,15 +608,15 @@ footer a:hover {
 .renters-card {
     width: 745px;
     border-radius: 16px;
-    border: 1px solid #E2E8F0;
+    border: 1px solid var(--clr-border-light);
     background: #FFF;
-    box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: var(--shadow-lg);
     padding: 17px 45px;
 }
 
 .quick-info-box {
     border-radius: 12px;
-    border: 1px solid #BFDBFE;
+    border: 1px solid var(--clr-border-info);
     background: var(--clr-bg-info);
     padding: 5px 15px;
     text-align: center;
@@ -615,8 +636,8 @@ footer a:hover {
     justify-content: space-between;
     align-items: center;
     border-radius: 12px;
-    border: 1px solid #86EFAC;
-    background: #ECFDF5;
+    border: 1px solid var(--clr-border-success);
+    background: var(--clr-bg-success);
     padding: 10px 25px;
     margin-bottom: 14px;
 
@@ -625,7 +646,7 @@ footer a:hover {
     }
 
     & span {
-        color: #059669;
+        color: var(--clr-success-dark);
         font-size: 28px;
         font-weight: 700;
     }
@@ -640,7 +661,7 @@ footer a:hover {
 .tip-card {
     position: relative;
     border-radius: 16px;
-    border: 2px solid #DBEAFE;
+    border: 2px solid var(--clr-border-blue);
     background: #FFF;
     padding: 15px;
     transition-property: transform, box-shadow;
@@ -670,8 +691,8 @@ footer a:hover {
 }
 
 .tip-card:has(input:checked) {
-    border-color: #10B981;
-    background: #ECFDF5;
+    border-color: var(--clr-border-success);
+    background: var(--clr-bg-success);
 }
 
 .tip-cost-info {
@@ -680,17 +701,17 @@ footer a:hover {
     align-items: center;
 
     & small {
-        color: #6D28D9;
+        color: var(--clr-purple);
         font-size: 12px;
         font-weight: 700;
         border-radius: 10px;
         padding: 5px 10px;
-        background: #EDE9FE;
+        background: var(--clr-purple-soft);
     }
 
 
     & strong {
-        color: #059669;
+        color: var(--clr-success-dark);
         font-size: 16px;
     }
 }
@@ -700,20 +721,20 @@ footer a:hover {
     margin-top: 14px;
     padding: 12px;
     background: var(--clr-btn-hover);
-    color: #FFF;
+    color: var(--clr-text-white);
     border: none;
     border-radius: 16px;
     font-size: 21px;
     font-weight: 700;
     cursor: pointer;
-    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.50));
+    box-shadow: var(--shadow-sm);
     transition: all 0.2s ease;
 }
 
 .add-tips-btn:hover {
-    background: #2563EB;
+    background: var(--clr-accent-hover);
     transform: translateY(-2px);
-    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+    box-shadow: var(--shadow-md);
 }
 
 /* 
@@ -765,16 +786,16 @@ footer a:hover {
 .savings-card {
     width: 745px;
     border-radius: 16px;
-    border: 1px solid #E2E8F0;
+    border: 1px solid var(--clr-border-light);
     background: #FFF;
-    box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: var(--shadow-lg);
     padding: 17px 45px;
 }
 
 /* ---- INFO BANNER ---- */
 .savings-info-banner {
     background-color: var(--clr-bg-info);
-    border: 1px solid #BFDBFE;
+    border: 1px solid var(--clr-border-info);
     border-radius: 8px;
     padding: 12px;
     text-align: center;
@@ -782,13 +803,13 @@ footer a:hover {
 
     & b {
         font-size: 16px; 
-        color: var(--text-dark); 
+        color: var(--clr-text-primary); 
         display: block;
     }
 
     & span {
         font-size: 16px;
-        color: var(--text-dark);
+        color: var(--clr-text-primary);
     }
 }
 
@@ -801,8 +822,8 @@ footer a:hover {
 
 .savings-summary-box {
     flex: 1;
-    background-color: #ECFDF5;
-    border: 1px solid #86EFAC;
+    background-color: var(--clr-bg-success);
+    border: 1px solid var(--clr-border-success);
     border-radius: 8px;
     padding: 15px;
     text-align: center;
@@ -825,7 +846,7 @@ footer a:hover {
 .savings-val-green {
     font-size: 24px;
     font-weight: 700;
-    color: #059669;
+    color: var(--clr-success-dark);
 }
 
 /* ---- GOALS LIST ---- */
@@ -837,15 +858,15 @@ footer a:hover {
 }
 
 .savings-goal-card {
-    border: 1px solid #DBEAFE;
+    border: 1px solid var(--clr-border-blue);
     border-radius: 8px;
     padding: 15px;
     background: white;
 }
 
 .savings-goal-card.savings-completed {
-    border-color: #34D399;
-    background-color: #ECFDF5;
+    border-color: var(--clr-border-success);
+    background-color: var(--clr-bg-success);
 }
 
 .savings-goal-header {
@@ -867,19 +888,19 @@ footer a:hover {
 .savings-progress-track {
     width: 100%;
     height: 10px;
-    background-color: #e2e8f0;
+    background-color: var(--clr-border-light);
     border-radius: 10px;
     margin-bottom: 15px;
     overflow: hidden;
 }
 
 .savings-progress-fill.savings-green { 
-    background-color: #10B981; 
+    background-color: var(--clr-success); 
     width: 100%; 
     height: 100%; 
 }
 .savings-progress-fill.savings-grey { 
-    background-color: #cbd5e1; 
+    background-color: var(--clr-border-upload); 
     width: 0%; 
     height: 100%; 
 }
@@ -903,7 +924,7 @@ footer a:hover {
 }
 
 .savings-btn.savings-done { 
-    background-color: #10B981; 
+    background-color: var(--clr-success); 
 }
 
 .savings-btn.savings-mark { 
@@ -911,14 +932,14 @@ footer a:hover {
 }
 .savings-btn.savings-mark:hover {
     transform: translateY(-2px);
-    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
-    background: #2563EB;
+    box-shadow: var(--shadow-md);
+    background: var(--clr-accent-hover);
 }
 
 .savings-text { 
     font-size: 16px; 
     font-weight: 700; 
-    color: #10B981; 
+    color: var(--clr-success); 
 }
 
 /* ---- ADD GOAL BOX ---- */
@@ -942,7 +963,7 @@ footer a:hover {
 
     & input {
         padding: 10px 12px;
-        border: 1px solid #CBD5E1;
+        border: 1px solid var(--clr-border-upload);
         border-radius: 6px;
         font-size: 12px;
         font-family: var(--clr-bg-surface);
@@ -972,15 +993,12 @@ footer a:hover {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.50));
+    box-shadow: var(--shadow-sm);
     transition: all 0.2s ease;
-
-    & hover {
-        opacity: 0.9;
-    }
 }
+
 .savings-btn-save-plan:hover {
     transform: translateY(-2px);
-    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
-    background: #2563EB;
+    box-shadow: var(--shadow-md);
+    background: var(--clr-accent-hover);
 }
