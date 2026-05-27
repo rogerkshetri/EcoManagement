@@ -205,7 +205,6 @@ footer a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-
   /* Box heading */
   & h3 {
     font-size: 24px;
@@ -225,26 +224,20 @@ footer a:hover {
   background: var(--clr-btn-default);
   color: var(--clr-text-secondary);
   font-weight: bold;
-
   /* Button shadow */
   box-shadow: var(--shadow-sm);
-
   /* Smooth hover transition */
   transition: all 0.2s ease;
 }
 
 /* Button hover effect */
 .homepage-btn:hover {
-
   /* Changes button background colour */
   background: var(--clr-btn-hover);
-
   /* Changes text colour */
   color: var(--clr-bg-surface);
-
   /* Slight upward movement */
   transform: translateY(-2px);
-
   /* Stronger shadow on hover */
   box-shadow: var(--shadow-md);
 }
