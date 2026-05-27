@@ -157,7 +157,7 @@ footer a:hover {
     Homepage 
     Author: Robindro Kshetrimayum
 */
-.title-box {
+.homepage-title-box {
   text-align: center;
   margin-bottom: 16px;
   max-width: 400px;
@@ -185,7 +185,7 @@ footer a:hover {
 
 
 /* Main content box */
-.choice-box {
+.homepage-choice-box {
   width: 560px;
   background: #fff;
   border-radius: 8px;
@@ -195,7 +195,7 @@ footer a:hover {
 }
 
 /* Blue top bar decoration */
-.choice-box::before {
+.homepage-choice-box::before {
   content: "";
   display: block;
   height: 35px;
@@ -203,7 +203,7 @@ footer a:hover {
 }
 
 /* Content inside the box */
-.choice-content {
+.homepage-choice-content {
   padding: 35px 35px;
   display: flex;
   flex-direction: column;
