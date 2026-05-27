@@ -178,13 +178,10 @@ footer a:hover {
   }
 }
 
-  /* Adds spacing between multiple paragraphs */
   & p + p {
     margin-top: 12px;
   }
-
-
-/* Main content box */
+  
 .homepage-choice-box {
   width: 560px;
   background: #fff;
